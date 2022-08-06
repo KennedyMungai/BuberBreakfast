@@ -2,7 +2,7 @@ using BuberBreakfast.Models;
 
 namespace BuberBreakfast.Services.Breakfasts;
 
-interface IBreakfastService
+public interface IBreakfastService
 {
     void CreateBreakfast(Breakfast breakfast);
 }
