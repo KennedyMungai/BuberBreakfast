@@ -10,6 +10,6 @@ public class BreakfastsController : ControllerBase
     [HttpPost("/breakfasts")]
     public IActionResult CreateBreakfast(CreateBreakfastRequest request)
     {
-        
+        return Ok(request);
     }
 }
