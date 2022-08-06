@@ -4,5 +4,5 @@ namespace BuberBreakfast.Services.Breakfasts;
 
 interface IBreakfastService
 {
-    void CreateBreakfast(Breakfast request);
+    void CreateBreakfast(Breakfast breakfast);
 }
