@@ -75,7 +75,7 @@ public class BreakfastsController : ControllerBase
         return Ok(request);
     }
 
-    [HttpDelete("{id:guid")]
+    [HttpDelete("{id:guid}")]
     public IActionResult DeleteBreakfast(Guid id)
     {
         return Ok(id);
