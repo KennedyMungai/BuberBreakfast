@@ -53,6 +53,8 @@ public class BreakfastsController : ControllerBase
     [HttpGet("{id:guid}")]
     public IActionResult GetBreakfast(Guid id)
     {
+        Breakfast breakfast = _breakfastService.GetBreakfast(id);
+
         return Ok(id);
     }
 
