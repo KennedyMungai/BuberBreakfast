@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BuberBreakfast.Controllers;
 
 [ApiController]
-[Route("breakfasts")]
+[Route("[controller]")]
 public class BreakfastsController : ControllerBase
 {
     [HttpPost]
