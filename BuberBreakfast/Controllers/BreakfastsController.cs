@@ -22,6 +22,19 @@ public class BreakfastsController : ControllerBase
             request.Sweet
         );
 
+        // TODO : Save breakfast to database
+
+        var response = new BreakfastResponse(
+            breakfast.Id,
+            breakfast.Name,
+            breakfast.Description,
+            breakfast.StartDateTime,
+            breakfast.EndDateTime,
+            breakfast.LastModifiedDateTime,
+            breakfast.Savoury,
+            breakfast.Sweet
+        );
+
         return Ok(request);
     }
 
