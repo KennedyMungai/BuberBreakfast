@@ -3,6 +3,27 @@ namespace BuberBreakfast.Models;
 
 public class Breakfast
 {
+    public Breakfast(
+        Guid id, 
+        string name, 
+        string description, 
+        DateTime startDateTime, 
+        DateTime endDateTime, 
+        DateTime lastModifiedDateTime, 
+        List<string> savoury, 
+        List<string> sweet)
+    {
+        // Enforce the invariants
+        Id = id;
+        Name = name;
+        Description = description;
+        StartDateTime = startDateTime;
+        EndDateTime = endDateTime;
+        LastModifiedDateTime = lastModifiedDateTime;
+        Savoury = savoury;
+        Sweet = sweet;
+    }
+
     public Guid Id { get;}
     public string? Name { get;}
     public string? Description { get;}
