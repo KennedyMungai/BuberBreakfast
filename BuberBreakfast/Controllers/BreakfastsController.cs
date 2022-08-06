@@ -30,7 +30,7 @@ public class BreakfastsController : ControllerBase
             request.Sweet
         );
 
-        // TODO : Save breakfast to database
+        _breakfastService.CreateBreakfast(breakfast);
 
         var response = new BreakfastResponse(
             breakfast.Id,
