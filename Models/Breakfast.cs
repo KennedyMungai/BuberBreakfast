@@ -1,4 +1,5 @@
 using System;
+
 namespace BuberBreakfast.Models;
 
 public class Breakfast
