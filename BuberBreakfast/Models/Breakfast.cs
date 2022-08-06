@@ -4,10 +4,6 @@ namespace BuberBreakfast.Models;
 
 public class Breakfast
 {
-    public Breakfast()
-    {
-    }
-
     public Breakfast(
         Guid id, 
         string name, 
