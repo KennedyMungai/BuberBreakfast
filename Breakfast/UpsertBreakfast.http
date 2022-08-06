@@ -1,4 +1,4 @@
-POST https://localhost:5001/breakfasts
+PUT https://localhost:5001/breakfasts/00000000-0000-0000-0000-000000000000
 Content-Type: application/json
 
 {
