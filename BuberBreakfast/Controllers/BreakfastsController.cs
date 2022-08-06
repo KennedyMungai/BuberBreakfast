@@ -1,5 +1,6 @@
 using BuberBreakfast.Contracts.Breakfast;
 using Microsoft.AspNetCore.Mvc;
+using BuberBreakfast.Models;
 
 namespace BuberBreakfast.Controllers;
 
@@ -10,6 +11,10 @@ public class BreakfastsController : ControllerBase
     [HttpPost]
     public IActionResult CreateBreakfast(CreateBreakfastRequest request)
     {
+        var breakfast = new Breakfast(
+            
+        );
+
         return Ok(request);
     }
 
