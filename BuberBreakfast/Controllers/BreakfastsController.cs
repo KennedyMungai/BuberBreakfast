@@ -1,6 +1,7 @@
 using BuberBreakfast.Contracts.Breakfast;
 using Microsoft.AspNetCore.Mvc;
 using BuberBreakfast.Models;
+using BuberBreakfast.Services.Breakfasts;
 
 namespace BuberBreakfast.Controllers;
 
@@ -8,6 +9,13 @@ namespace BuberBreakfast.Controllers;
 [Route("[controller]")]
 public class BreakfastsController : ControllerBase
 {
+    private readonly IBreakfastService _breakfastService;
+
+    public BreakfastsController(IBreakfastService breakfastService)
+    {
+        _breakfastService = breakfastService;
+    }
+
     [HttpPost]
     public IActionResult CreateBreakfast(CreateBreakfastRequest request)
     {
