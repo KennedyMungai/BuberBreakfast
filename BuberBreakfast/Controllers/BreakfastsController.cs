@@ -12,7 +12,14 @@ public class BreakfastsController : ControllerBase
     public IActionResult CreateBreakfast(CreateBreakfastRequest request)
     {
         var breakfast = new Breakfast(
-            
+            Guid.NewGuid(),
+            request.Name,
+            request.Description,
+            request.StartDateTime,
+            request.EndDateTime,
+            DateTime.UtcNow,
+            request.Savoury,
+            request.Sweet
         );
 
         return Ok(request);
