@@ -66,7 +66,7 @@ public class BreakfastsController : ControllerBase
             breakfast.Sweet
         );
 
-        return Ok(id);
+        return Ok(response);
     }
 
     [HttpPut("{id:guid}")]
