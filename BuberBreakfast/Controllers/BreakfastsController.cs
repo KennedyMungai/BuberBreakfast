@@ -12,4 +12,10 @@ public class BreakfastsController : ControllerBase
     {
         return Ok(request);
     }
+
+    [HttpGet("/breakfasts/{id:guid}")]
+    public IActionResult GetBreakfast(Guid id)
+    {
+        return Ok(id);
+    }
 }
