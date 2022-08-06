@@ -55,6 +55,17 @@ public class BreakfastsController : ControllerBase
     {
         Breakfast breakfast = _breakfastService.GetBreakfast(id);
 
+        var response = new BreakfastResponse(
+            breakfast.Id,
+            breakfast.Name,
+            breakfast.Description,
+            breakfast.StartDateTime,
+            breakfast.EndDateTime,
+            breakfast.LastModifiedDateTime,
+            breakfast.Savoury,
+            breakfast.Sweet
+        );
+
         return Ok(id);
     }
 
