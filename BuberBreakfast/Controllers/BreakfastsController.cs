@@ -35,7 +35,7 @@ public class BreakfastsController : ControllerBase
             breakfast.Sweet
         );
 
-        return Ok(request);
+        return Ok(response);
     }
 
     [HttpGet("{id:guid}")]
