@@ -35,7 +35,11 @@ public class BreakfastsController : ControllerBase
             breakfast.Sweet
         );
 
-        return Ok(response);
+        return CreatedAtAction(
+            nameof(GetBreakfast),
+            new { id = breakfast.Id},
+            response
+            );
     }
 
     [HttpGet("{id:guid}")]
