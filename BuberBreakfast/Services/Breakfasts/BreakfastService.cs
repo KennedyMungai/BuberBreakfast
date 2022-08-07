@@ -38,6 +38,6 @@ public class BreakfastService : IBreakfastService
 
         _breakfasts[breakfast.Id] = breakfast;
 
-        return Result.Updated;
+        return new UpsertedBreakfast(IsNewlyCreated);
     }
 }
