@@ -57,6 +57,10 @@ public class BreakfastsController : ControllerBase
     {
         ErrorOr<Breakfast> getBreakfastResult = _breakfastService.GetBreakfast(id);
 
+        return getBreakfastResult.Match(
+            breakfast => Ok(MapBreakfastResponse(breakfast)),
+            errors => Problem()
+        );
         // if(getBreakfastResult.IsError && getBreakfastResult.FirstError == Errors.Breakfast.NotFound)
         // {
         //     return NotFound();
