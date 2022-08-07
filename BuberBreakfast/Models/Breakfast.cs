@@ -35,7 +35,14 @@ public class Breakfast
         Sweet = sweet;
     }
 
-    public static ErrorOr<Breakfast> Create()
+    public static ErrorOr<Breakfast> Create(
+        string name, 
+        string description,
+        DateTime startDateTime,
+        DateTime endDateTime,
+        List<string> savoury,
+        List<string> sweet
+    )
     {
         
     }
