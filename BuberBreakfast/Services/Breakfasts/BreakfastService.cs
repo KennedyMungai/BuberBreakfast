@@ -35,5 +35,7 @@ public class BreakfastService : IBreakfastService
     public ErrorOr<Updated> UpsertBreakfast(Breakfast breakfast)
     {
         _breakfasts[breakfast.Id] = breakfast;
+
+        return Result.Updated;
     }
 }
