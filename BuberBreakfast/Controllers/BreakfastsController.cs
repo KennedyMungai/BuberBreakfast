@@ -66,11 +66,11 @@ public class BreakfastsController : ApiController
             request.Sweet
         );
 
-        ErrorOr<UpsertedBreakfast> upsertedResult = _breakfastService.UpsertBreakfast(breakfast);
+        ErrorOr<UpsertedBreakfast> upsertBreakfastResult = _breakfastService.UpsertBreakfast(breakfast);
 
         // TODO Return 201 if a new breakfast was created
 
-        return upsertedResult.Match(
+        return upsertBreakfastResult.Match(
             upserted => upserted.IsNewlyCreated ? CreatedAtGetBreakfast(breakfast) : NoContent(),
             errors => Problem(errors)
         );
