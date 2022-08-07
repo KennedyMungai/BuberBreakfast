@@ -32,6 +32,11 @@ public class BreakfastsController : ApiController
 
         ErrorOr<Created> createBreakfastResult =_breakfastService.CreateBreakfast(breakfast);
 
+        if (createBreakfastResult is Error)
+        {
+            return Problem(createBreakfastResult.Errors);
+        }
+
         return CreatedAtAction(
             actionName: nameof(GetBreakfast),
             routeValues: new { id = breakfast.Id},
