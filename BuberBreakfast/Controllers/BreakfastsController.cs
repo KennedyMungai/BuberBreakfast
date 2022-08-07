@@ -7,8 +7,6 @@ using BuberBreakfast.ServiceErrors;
 
 namespace BuberBreakfast.Controllers;
 
-[ApiController]
-[Route("[controller]")]
 public class BreakfastsController : ApiController
 {
     private readonly IBreakfastService _breakfastService;
