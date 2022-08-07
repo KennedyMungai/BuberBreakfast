@@ -11,6 +11,8 @@ public class BreakfastService : IBreakfastService
     public ErrorOr<Created> CreateBreakfast(Breakfast breakfast)
     {
         _breakfasts.Add(breakfast.Id, breakfast);
+
+        return Result.Created;
     }
 
     public void DeleteBreakfast(Guid id)
