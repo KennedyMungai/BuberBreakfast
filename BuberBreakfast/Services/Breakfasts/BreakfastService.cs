@@ -23,6 +23,6 @@ public class BreakfastService : IBreakfastService
 
     public void UpsertBreakfast(Breakfast breakfast)
     {
-        _breakfasts.
+        _breakfasts[breakfast.Id] = breakfast;
     }
 }
