@@ -71,7 +71,7 @@ public class BreakfastsController : ApiController
         // TODO Return 201 if a new breakfast was created
 
         return upsertedResult.Match(
-            upserted => CreatedAsGetBreakfast(breakfast)
+            upserted => CreatedAsGetBreakfast(breakfast),
             errors => Problem(errors)
         );
     }
