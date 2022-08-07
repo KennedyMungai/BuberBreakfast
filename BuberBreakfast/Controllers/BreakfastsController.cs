@@ -9,7 +9,7 @@ namespace BuberBreakfast.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class BreakfastsController : ControllerBase
+public class BreakfastsController : ApiController
 {
     private readonly IBreakfastService _breakfastService;
 
@@ -59,7 +59,7 @@ public class BreakfastsController : ControllerBase
 
         return getBreakfastResult.Match(
             breakfast => Ok(MapBreakfastResponse(breakfast)),
-            errors => Problem()
+            errors => Problem() 
         );
         // if(getBreakfastResult.IsError && getBreakfastResult.FirstError == Errors.Breakfast.NotFound)
         // {
