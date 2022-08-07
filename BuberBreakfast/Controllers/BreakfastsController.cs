@@ -107,4 +107,18 @@ public class BreakfastsController : ControllerBase
 
         return NoContent();
     }
+
+    private static BreakfastResponse MapBreakfastResponse(Breakfast breakfast)
+    {
+        return new BreakfastResponse(
+            breakfast.Id,
+            breakfast.Name,
+            breakfast.Description,
+            breakfast.StartDateTime,
+            breakfast.EndDateTime,
+            breakfast.LastModifiedDateTime,
+            breakfast.Savoury,
+            breakfast.Sweet
+        );
+    }
 }
