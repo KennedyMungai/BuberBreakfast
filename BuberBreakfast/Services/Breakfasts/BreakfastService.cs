@@ -1,4 +1,5 @@
 using BuberBreakfast.Models;
+using ErrorOr;
 
 namespace BuberBreakfast.Services.Breakfasts;
 
@@ -16,7 +17,7 @@ public class BreakfastService : IBreakfastService
         _breakfasts.Remove(id);
     }
 
-    public Breakfast GetBreakfast(Guid id)
+    public ErrorOr<Breakfast> GetBreakfast(Guid id)
     {
         return _breakfasts[id];
     }
