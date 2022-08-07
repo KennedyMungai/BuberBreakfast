@@ -82,7 +82,10 @@ public class BreakfastsController : ApiController
     {
         ErrorOr<Deleted> deleteResult = _breakfastService.DeleteBreakfast(id);
 
-        return NoContent();
+        return deleteResult.Match(
+            deleted => NoContent(),
+            errors => Problem(errors)
+        );
     }
 
     private static BreakfastResponse MapBreakfastResponse(Breakfast breakfast)
