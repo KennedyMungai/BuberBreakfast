@@ -7,6 +7,6 @@ public interface IBreakfastService
 {
     ErrorOr<Created> CreateBreakfast(Breakfast breakfast);
     ErrorOr<Breakfast> GetBreakfast(Guid id);
-    void UpsertBreakfast(Breakfast breakfast);
+    ErrorOr<Updated> UpsertBreakfast(Breakfast breakfast);
     void DeleteBreakfast(Guid id);
 }
