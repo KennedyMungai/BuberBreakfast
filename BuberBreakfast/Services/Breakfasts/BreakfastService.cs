@@ -18,6 +18,8 @@ public class BreakfastService : IBreakfastService
     public ErrorOr<Deleted> DeleteBreakfast(Guid id)
     {
         _breakfasts.Remove(id);
+
+        return Result.Deleted;
     }
 
     public ErrorOr<Breakfast> GetBreakfast(Guid id)
