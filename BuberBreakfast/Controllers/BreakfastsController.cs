@@ -80,7 +80,7 @@ public class BreakfastsController : ApiController
     [HttpDelete("{id:guid}")]
     public IActionResult DeleteBreakfast(Guid id)
     {
-        _breakfastService.DeleteBreakfast(id);
+        ErrorOr<Deleted> deleteResult = _breakfastService.DeleteBreakfast(id);
 
         return NoContent();
     }
