@@ -37,7 +37,7 @@ public class BreakfastsController : ApiController
             return Problem(createBreakfastResult.Errors);
         }
 
-        return CreatedAsGetBreakfast(breakfast);
+        return CreatedAtGetBreakfast(breakfast);
     }
 
     [HttpGet("{id:guid}")]
@@ -71,7 +71,7 @@ public class BreakfastsController : ApiController
         // TODO Return 201 if a new breakfast was created
 
         return upsertedResult.Match(
-            upserted => CreatedAsGetBreakfast(breakfast),
+            upserted => upserted.IsNewlyCreated ? CreatedAtGetBreakfast(breakfast) : NoContent(),
             errors => Problem(errors)
         );
     }
@@ -101,7 +101,7 @@ public class BreakfastsController : ApiController
         );
     }
 
-    private CreatedAtActionResult CreatedAsGetBreakfast(Breakfast breakfast)
+    private CreatedAtActionResult CreatedAtGetBreakfast(Breakfast breakfast)
     {
         return CreatedAtAction(
             actionName: nameof(GetBreakfast),
