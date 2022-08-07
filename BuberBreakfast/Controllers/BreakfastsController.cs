@@ -57,7 +57,7 @@ public class BreakfastsController : ApiController
 
         return getBreakfastResult.Match(
             breakfast => Ok(MapBreakfastResponse(breakfast)),
-            errors => Problem() 
+            errors => Problem(errors) 
         );
     }
 
