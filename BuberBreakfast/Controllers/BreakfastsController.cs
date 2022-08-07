@@ -94,6 +94,8 @@ public class BreakfastsController : ControllerBase
     [HttpDelete("{id:guid}")]
     public IActionResult DeleteBreakfast(Guid id)
     {
+        _breakfastService.DeleteBreakfast(id);
+
         return Ok(id);
     }
 }
