@@ -33,10 +33,10 @@ public class BreakfastsController : ApiController
         ErrorOr<Created> createBreakfastResult =_breakfastService.CreateBreakfast(breakfast);
 
         return CreatedAtAction(
-            nameof(GetBreakfast),
-            new { id = breakfast.Id},
-            response
-            );
+            actionName: nameof(GetBreakfast),
+            routeValues: new { id = breakfast.Id},
+            value: MapBreakfastResponse(breakfast)
+        );
     }
 
     [HttpGet("{id:guid}")]
