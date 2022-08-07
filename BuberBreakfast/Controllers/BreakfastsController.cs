@@ -101,4 +101,13 @@ public class BreakfastsController : ApiController
             breakfast.Sweet
         );
     }
+
+    private CreatedAtActionResult CreatedAsGetBreakfast(Breakfast breakfast)
+    {
+        return CreatedAtAction(
+            actionName: nameof(GetBreakfast),
+            routeValues: new { id = breakfast.Id},
+            value: MapBreakfastResponse(breakfast)
+        );
+    }
 }
