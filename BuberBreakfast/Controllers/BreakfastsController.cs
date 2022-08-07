@@ -84,7 +84,9 @@ public class BreakfastsController : ControllerBase
             request.Sweet
         );
 
-        return Ok(request);
+        _breakfastService.UpsertBreakfast(breakfast);
+
+        return NoContent();
     }
 
     [HttpDelete("{id:guid}")]
