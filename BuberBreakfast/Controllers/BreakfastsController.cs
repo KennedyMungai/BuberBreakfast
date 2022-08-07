@@ -86,6 +86,8 @@ public class BreakfastsController : ControllerBase
 
         _breakfastService.UpsertBreakfast(breakfast);
 
+        // TODO Return 201 if a new breakfast was created
+
         return NoContent();
     }
 
