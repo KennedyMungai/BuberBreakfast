@@ -43,6 +43,16 @@ public class Breakfast
         List<string> sweet
     )
     {
-        
+        // Enforce invariants
+        return new Breakfast(
+            Guid.NewGuid(),
+            name, 
+            description,
+            startDateTime,
+            endDateTime,
+            DateTime.UtcNow,
+            savoury,
+            sweet
+        );
     }
 }
