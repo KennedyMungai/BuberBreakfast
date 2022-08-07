@@ -32,17 +32,6 @@ public class BreakfastsController : ApiController
 
         ErrorOr<Created> createBreakfastResult =_breakfastService.CreateBreakfast(breakfast);
 
-        var response = new BreakfastResponse(
-            breakfast.Id,
-            breakfast.Name,
-            breakfast.Description,
-            breakfast.StartDateTime,
-            breakfast.EndDateTime,
-            breakfast.LastModifiedDateTime,
-            breakfast.Savoury,
-            breakfast.Sweet
-        );
-
         return CreatedAtAction(
             nameof(GetBreakfast),
             new { id = breakfast.Id},
