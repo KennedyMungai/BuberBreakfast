@@ -15,7 +15,7 @@ public class BreakfastService : IBreakfastService
         return Result.Created;
     }
 
-    public void DeleteBreakfast(Guid id)
+    public ErrorOr<Deleted> DeleteBreakfast(Guid id)
     {
         _breakfasts.Remove(id);
     }
