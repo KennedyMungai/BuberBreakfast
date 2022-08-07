@@ -1,4 +1,5 @@
 using System;
+using ErrorOr;
 
 namespace BuberBreakfast.Models;
 
@@ -32,5 +33,10 @@ public class Breakfast
         LastModifiedDateTime = lastModifiedDateTime;
         Savoury = savoury;
         Sweet = sweet;
+    }
+
+    public static ErrorOr<Breakfast> Create()
+    {
+        
     }
 }
