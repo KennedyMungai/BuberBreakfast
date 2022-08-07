@@ -37,11 +37,7 @@ public class BreakfastsController : ApiController
             return Problem(createBreakfastResult.Errors);
         }
 
-        return CreatedAtAction(
-            actionName: nameof(GetBreakfast),
-            routeValues: new { id = breakfast.Id},
-            value: MapBreakfastResponse(breakfast)
-        );
+        return CreatedAsGetBreakfast(breakfast);
     }
 
     [HttpGet("{id:guid}")]
