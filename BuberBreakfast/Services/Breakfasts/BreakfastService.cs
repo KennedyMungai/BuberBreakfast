@@ -11,6 +11,11 @@ public class BreakfastService : IBreakfastService
         _breakfasts.Add(breakfast.Id, breakfast);
     }
 
+    public void DeleteBreakfast(Guid id)
+    {
+        throw new NotImplementedException();
+    }
+
     public Breakfast GetBreakfast(Guid id)
     {
         return _breakfasts[id];
