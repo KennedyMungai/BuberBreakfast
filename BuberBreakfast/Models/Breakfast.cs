@@ -24,7 +24,6 @@ public class Breakfast
         List<string> savoury, 
         List<string> sweet)
     {
-        // Enforce the invariants
         Id = id;
         Name = name;
         Description = description;
