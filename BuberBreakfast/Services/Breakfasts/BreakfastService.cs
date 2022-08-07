@@ -32,7 +32,7 @@ public class BreakfastService : IBreakfastService
         return Errors.Breakfast.NotFound;
     }
 
-    public void UpsertBreakfast(Breakfast breakfast)
+    public ErrorOr<Updated> UpsertBreakfast(Breakfast breakfast)
     {
         _breakfasts[breakfast.Id] = breakfast;
     }
