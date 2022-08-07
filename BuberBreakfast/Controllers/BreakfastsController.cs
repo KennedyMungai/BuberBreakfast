@@ -59,25 +59,6 @@ public class BreakfastsController : ApiController
             breakfast => Ok(MapBreakfastResponse(breakfast)),
             errors => Problem() 
         );
-        // if(getBreakfastResult.IsError && getBreakfastResult.FirstError == Errors.Breakfast.NotFound)
-        // {
-        //     return NotFound();
-        // }
-
-        // var breakfast = getBreakfastResult.Value;
-
-        // var response = new BreakfastResponse(
-        //     breakfast.Id,
-        //     breakfast.Name,
-        //     breakfast.Description,
-        //     breakfast.StartDateTime,
-        //     breakfast.EndDateTime,
-        //     breakfast.LastModifiedDateTime,
-        //     breakfast.Savoury,
-        //     breakfast.Sweet
-        // );
-
-        // return Ok(response);
     }
 
     [HttpPut("{id:guid}")]
