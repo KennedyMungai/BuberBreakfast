@@ -13,7 +13,7 @@ public class BreakfastService : IBreakfastService
 
     public void DeleteBreakfast(Guid id)
     {
-        throw new NotImplementedException();
+        _breakfasts.Remove(id);
     }
 
     public Breakfast GetBreakfast(Guid id)
