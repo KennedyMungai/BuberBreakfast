@@ -96,6 +96,6 @@ public class BreakfastsController : ControllerBase
     {
         _breakfastService.DeleteBreakfast(id);
 
-        return NoContent()
+        return NoContent();
     }
 }
