@@ -34,6 +34,8 @@ public class BreakfastService : IBreakfastService
 
     public ErrorOr<Updated> UpsertBreakfast(Breakfast breakfast)
     {
+        var IsNewlyCreated = _breakfasts.ContainsKey(breakfast.Id);
+
         _breakfasts[breakfast.Id] = breakfast;
 
         return Result.Updated;
