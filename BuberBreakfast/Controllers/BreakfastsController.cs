@@ -72,6 +72,18 @@ public class BreakfastsController : ControllerBase
     [HttpPut("{id:guid}")]
     public IActionResult UpsertBreakfast(Guid id, UpsertBreakfastRequest request)
     {
+        var breakfast = new Breakfast
+        (
+            id,
+            request.Name,
+            request.Description,
+            request.StartDateTime,
+            request.EndDateTime,
+            DateTime.UtcNow,
+            request.Savoury,
+            request.Sweet
+        );
+
         return Ok(request);
     }
 
